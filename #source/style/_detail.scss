@@ -1,0 +1,118 @@
+.detail {
+  &__wrapper {
+    padding: clamp(6.25rem, 3.839rem + 10.71vw, 11.875rem) 0 clamp(3.75rem, 0.268rem + 15.48vw, 11.875rem) 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      & {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      @media (max-width: 992px) {
+        & .detail__right {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__left {
+    flex: 0 0 53%;
+  }
+
+  &__right {
+    flex: 0 0 47%;
+    padding-left: 70px;
+  }
+}
+
+.left-detail {
+  &__title {
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+  }
+
+  &__action {
+  }
+}
+
+.btn {
+}
+.right-detail {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+    border-radius: 20px;
+  }
+
+  &__item:nth-child(2) {
+    background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  }
+
+  &__item-body {
+    & span {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.01em;
+      text-transform: capitalize;
+      color: #ffffff;
+    }
+
+    & p {
+      padding-top: 8px;
+      font-weight: 400;
+      font-size: clamp(0.75rem, 0.643rem + 0.48vw, 1rem);
+      line-height: clamp(1.25rem, 1.143rem + 0.48vw, 1.5rem);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.pulses {
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgb(37, 122, 219);
+  animation: pulses 2s infinite;
+}
+@media (any-hover: hover) {
+  .pulses:hover {
+    animation: none;
+  }
+}
+@keyframes pulses {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgb(37, 207, 219);
+    box-shadow: 0 0 0 0 rgb(37, 207, 219);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(37, 122, 219, 0);
+    box-shadow: 0 0 0 10px rgb(37, 207, 219, 0);
+  }
+  to {
+    -moz-box-shadow: 0 0 0 0 rgb(37, 207, 219, 0);
+    box-shadow: 0 0 0 0 rgb(37, 207, 219, 0);
+  }
+}
+@-webkit-keyframes pulses {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgb(37, 207, 219);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgb(37, 207, 219, 0);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 0 rgb(37, 207, 219, 0);
+  }
+}

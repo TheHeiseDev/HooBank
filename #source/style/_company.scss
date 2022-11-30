@@ -1,0 +1,18 @@
+.company {
+  &__wrapper {
+    padding: clamp(0.813rem, -0.366rem + 5.24vw, 3.563rem) 0 clamp(3.75rem, 2.679rem + 4.76vw, 6.25rem) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease 0s;
+    // flex-wrap: wrap;
+    gap: 20px;
+    & svg path {
+      transition: all 0.3s ease 0s;
+    }
+
+    & svg:hover path {
+      fill: white;
+    }
+  }
+}

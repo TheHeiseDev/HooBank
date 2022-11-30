@@ -1,0 +1,63 @@
+.statistic {
+  &__wrapper {
+    padding: 50px 0 0px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      & {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      & {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.number {
+  font-weight: 600;
+  font-size: clamp(1.25rem, 0.714rem + 2.38vw, 2.5rem);
+  line-height: 130%;
+  /* or 53px */
+
+  color: #ffffff;
+}
+.text {
+  font-weight: 400;
+  font-size: clamp(0.938rem, 0.804rem + 0.6vw, 1.25rem);
+  line-height: 130%;
+  /* or 27px */
+
+  text-transform: uppercase;
+
+  background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

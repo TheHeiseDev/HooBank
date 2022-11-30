@@ -1,0 +1,94 @@
+// Обнуляющий файл стилей  ##########################
+@import "../style/reset";
+@import "../style/header";
+@import "../style/intro";
+@import "../style/statistic";
+@import "../style/detail";
+@import "../style/app";
+@import "../style/find";
+@import "../style/comments";
+@import "../style/company";
+@import "../style/baner";
+@import "../style/footer";
+
+// - Импорт шрифтов ##########################
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+// Переменные для всего проекта
+:root {
+  --poppins: "Poppins", sans-serif;
+  --font-gradient: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  --buttom-gradient: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  --bg-color: #00040f;
+}
+
+body {
+  font-family: var(--poppins);
+  font-weight: 400;
+  min-height: 100%;
+  margin: 0;
+  color: white;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-family: var(--poppins);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.75rem, 0.589rem + 0.71vw, 1.125rem);
+  line-height: 170%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.title {
+  font-family: var(--poppins);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.625rem, 1.036rem + 2.62vw, 3rem); //min - 32 max-48
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--buttom-gradient);
+  border-radius: 10px;
+  padding: 19px 33px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #00040e;
+  transition: opacity 0.3s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
